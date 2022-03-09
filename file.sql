@@ -37,3 +37,7 @@ SELECT COUNT(*) FROM `students` GROUP BY YEAR(`enrolment_date`)
 -- CONTARE GLI INSEGNANTI CHE HANNO L'UFFICIO NELLO STESSO EDIFICIO
 
 SELECT COUNT(*) FROM `teachers` GROUP BY `office_address`
+
+-- CALCOLARE LA MEDIA DEI VOTI DI OGNI APPELLO D'ESAME
+
+SELECT AVG(`vote`) FROM `exams, exam_student` GROUP BY `exams(`date`)`
