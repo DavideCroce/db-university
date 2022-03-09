@@ -31,3 +31,5 @@ SELECT COUNT(*) FROM `departments`
 SELECT COUNT(*) FROM `teachers` WHERE `phone` IS NULL
 
 -- CONTARE QUANTI ISCRITTI CI SONO STATI OGNI ANNO
+
+SELECT COUNT(*) FROM `students` GROUP BY YEAR(`enrolment_date`)
