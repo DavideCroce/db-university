@@ -1,0 +1,4 @@
+-- SELEZIONARE TUTTI GLI STUDENTI NATI NEL 1990
+
+SELECT * FROM `students` WHERE `date_of_birth` LIKE '1990-%'
+
