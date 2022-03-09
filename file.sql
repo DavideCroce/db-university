@@ -2,3 +2,6 @@
 
 SELECT * FROM `students` WHERE `date_of_birth` LIKE '1990-%'
 
+-- SELEZIONARE TUTTI I CORSI CHE VALGONO PIù DI 10 CREDITI
+
+SELECT * FROM `courses` WHERE `cfu` >= 10
