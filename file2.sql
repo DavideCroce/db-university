@@ -17,3 +17,12 @@ FROM `students`
 JOIN `degrees` ON `degrees` . `id` = `students` . `degree_id`
 JOIN `departments` ON `departments` . `id` = `degrees` . `department_id`
 ORDER BY `students` . `surname` ASC
+
+-- SELEZIONARE TUTTI I CORSI DI LAUREA CON I RELATIVI INSEGNANTI
+
+SELECT `degrees` . `name` AS `Corso di Laurea`, `courses` . `name` AS `Corso Interno`, `teachers` . `name`, `teachers` . `surname`
+FROM `degrees`
+JOIN `courses` ON `degrees` . `id` = `courses` . `degree_id`
+JOIN `course_teacher` ON `course_teacher` . `course_id` = `courses` . `id`
+JOIN `teachers` ON `teachers` . `id` = `course_teacher` . `teacher_id`
+ORDER BY `degrees` . `name`
